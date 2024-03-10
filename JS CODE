@@ -1,0 +1,18 @@
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var numberGame = function (nums) {
+    const arr = [];
+    nums.sort((a, b) => a - b);
+
+
+    while (nums.length > 0) {
+        let minAlice = nums.shift();
+        let minBob = nums.shift();
+
+        arr.push(minBob)
+        arr.push(minAlice)
+    }
+    return arr;
+}
